@@ -1,0 +1,23 @@
+{
+  "name": "bouldering-app-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev --workspace=apps/server",
+    "dev:mobile": "npm run start --workspace=apps/mobile",
+    "test:server": "npm run test --workspace=apps/server",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.8.0",
+    "typescript": "~5.8.0",
+    "typescript-eslint": "^8.66.0"
+  },
+  "dependencies": {
+    "globals": "^17.9.0"
+  }
+}
